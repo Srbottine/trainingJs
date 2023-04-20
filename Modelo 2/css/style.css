@@ -1,8 +1,8 @@
 body {
     background-color: blueviolet;
     font: normal 15pt Arial;
-
 }
+
 header {
     color: white;
     text-align: center;
@@ -14,18 +14,11 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.365);
-    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.365);   
 }
 
 div {
     text-align: center;
     padding: 8px;
     margin: auto;
-}
-
-#photo {
-    background-color: white;
-    width: 200px;
-    height: 200px;
 }
