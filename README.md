@@ -1,2 +1,2 @@
 # Javascript_basico
-aprendendo javascript do basico para avançado 
+learning javascript from basic to advanced
