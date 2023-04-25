@@ -9,14 +9,18 @@
 </head>
 <body>
     <header>
-        <h1>contador </h1>
+        <h1>verificador de idade </h1>
     </header>
       <section>
         <div>
-          <p>Dados:
-           <input type="number" name="in" id="in">
-           <input type="number" name="end" id="end">
-           <input type="number" name="count" id="count">
+          <p>ano de nascimento:
+            <input type="text" name="txtano" id="txtano" min="0">
+          </p>
+          <p>Sexo:
+            <input type="radio" name="radsex" id="m" checked>
+            <label for="m">Masculino</label>
+            <input type="radio" name="radsex" id="f" checked>
+            <label for="f">Feminino</label>
           </p>
           <p>
             <input type="button" value="verificar" id="Bcheck">

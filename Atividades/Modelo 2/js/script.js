@@ -2,28 +2,38 @@ var Bcheck = document.querySelector('input#Bcheck')
 Bcheck.addEventListener('click', check)
 
 function check() {
-    var date = new Date()
-    var year = date.getFullYear()
-    var fyear = document.querySelector('input#txtano')
+    var fin = document.querySelector('input#in')
+    var end = document.querySelector('input#end')
+    var count = document.querySelector('input#count')
     var res = document.querySelector('div#res')
 
-    if (fyear.value.length == 0 || fyear.value > year) {
-        window.alert(`[ERRO] data errada`)
+    if (fin.value.length == 0 || end.value.length == 0 || count.value.length == 0) {
 
+        res.innerHTML = 'impossivel contar'
+        
     } else {
-        var fsex = document.getElementsByName('radsex')
-        var fage = year - Number(fyear.value)
-        var genery = ''
+        res.innerHTML = 'contando: '
+        var i = Number(fin.value)
+        var f = Number(end.value)
+        var c = Number(count.value)
+        if (c <= 0) {
+            window.document('passo invalido')
+            c = 1
+        }
+        if (i < f) {
 
-        if (fsex[0].checked) {
-            genery = 'Homem'
+            for (var x = i; x <= f; x += c) {
+                res.innerHTML += `${x} \u{1F47E}`
+            }
 
-        } else if (fsex[1].checked) {
-            genery = 'Mulher'
+        } else {
+
+            for (var x = i; x >= f; x -= c) {
+                res.innerHTML += `${x} \u{1F47E}`
+            }
+
         }
         
-        res.innerHTML = `${genery}, ${fage}`
+    }
 
-    } 
-
-}
+} 
